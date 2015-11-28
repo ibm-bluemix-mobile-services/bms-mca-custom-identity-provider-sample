@@ -1,0 +1,17 @@
+{
+  "name": "mca-sample-custom-identity-provider",
+  "version": "1.0.0",
+  "description": "A Node.js application implementing a custom identity provider interface for Mobile Client Access Service",
+  "main": "app.js",
+  "scripts": {
+  	"start":"node ."
+  },
+  "author": "Anton Aleksandrov",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cfenv": "^1.0.3",
+    "express": "^4.13.3",
+    "log4js": "^0.6.29"
+  }
+}

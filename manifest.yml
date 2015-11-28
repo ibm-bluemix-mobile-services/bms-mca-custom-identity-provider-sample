@@ -1,0 +1,9 @@
+applications:
+- disk_quota: 512M
+  host: custom-identity-provider
+  name: custom-identity-provider
+  command: node .
+  instances: 1
+  memory: 1024M
+  timeout: 180
+  buildpack: sdk-for-nodejs
