@@ -3,6 +3,7 @@ var cfenv = require('cfenv');
 var log4js = require('log4js');
 var jsonParser = require('body-parser').json();
 
+// Using hardcoded user repository
 var userRepository = {
 	"john.lennon":      { password: "12345" , displayName:"John Lennon"      , dob:"October 9, 1940"},
 	"paul.mccartney":   { password: "67890" , displayName:"Paul McCartney"   , dob:"June 18, 1942"},
@@ -43,10 +44,9 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 	var username = req.body.challengeAnswer["username"];
 	var password = req.body.challengeAnswer["password"];
 
-	var userObject = userRepository[username];
-
 	var responseJson = { status: "failure" };
 
+	var userObject = userRepository[username];
 	if (userObject && userObject.password == password ){
 		logger.debug("Login success for userId ::", username);
 		responseJson.status = "success";
