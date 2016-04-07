@@ -4,6 +4,6 @@ applications:
   name: custom-identity-provider
   command: node .
   instances: 1
-  memory: 1024M
+  memory: 512M
   timeout: 180
   buildpack: sdk-for-nodejs
